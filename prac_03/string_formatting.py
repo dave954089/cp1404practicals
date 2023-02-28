@@ -39,10 +39,8 @@ print(f"{year} {name} for about ${cost}")                                    # S
 # TODO: Using a for loop with the range function and string formatting,
 # produce the following right-aligned output (DO NOT use a list):
 for i in range(0, 200, 50):                                                  #solution
-    print(i)
+    print(f'{i:>5}')
 #   0
 #  50
 # 100
 # 150
-
-# my name is jim bradford
