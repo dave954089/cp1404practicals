@@ -7,6 +7,7 @@ def main():
 
 
 def get_data():
+    subject = []
     input_file = open(FILENAME)
     for line in input_file:
         print(line)  # See what a line looks like
@@ -17,7 +18,14 @@ def get_data():
         parts[2] = int(parts[2])  # Make the number an integer (ignore PyCharm's warning)
         print(parts)  # See if that worked
         print("----------")
+        subject.append(parts)
     input_file.close()
+    return subject
+
+
+def display_data(data):
+    for subject in data:
+        print(f"{subject[0]} is taught by {subject[1]:12} and has {subject[2]:3} students")
 
 
 main()
