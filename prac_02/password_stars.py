@@ -3,12 +3,16 @@ def main():
     password = get_password()
     while len(password) != minimum_length:
         get_password()
-    print("*" * len(password))
+    print_stars(password)
 
 
 def get_password():
     password = input("Enter password: ")
     return password
+
+
+def print_stars(password):
+    print("*" * len(password))
 
 
 main()
