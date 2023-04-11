@@ -1,4 +1,4 @@
-import random
+# import random
 
 
 def main():
@@ -8,11 +8,11 @@ def main():
 
 
 def getting_score():
-    score = random.randint(0, 100)
-    # score = float(input("Enter score: "))
-    # while score < 0 or score > 100:
-    #     print("Invalid score")  # for validating input
-    #     score = getting_score()
+    # score = random.randint(0, 100)
+    score = float(input("Enter score: "))
+    while score < 0 or score > 100:
+        print("Invalid score")  # for validating input
+        score = getting_score()
     return score
 
 

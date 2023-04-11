@@ -4,8 +4,9 @@ def main():
     while choice != "Q":  # To select choices in menu
         if choice == "G":
             score = getting_score()
-        elif choice == "P":
             print(f"Score = {score}")
+        elif choice == "P":
+            print(score_result(score))
         elif choice == "S":
             print_star(score)
         else:
@@ -39,7 +40,7 @@ def score_result(score):
         result = "Passable"
     else:
         result = "Bad"
-    print(result)
+    return result
 
 
 main()
