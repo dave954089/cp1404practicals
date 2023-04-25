@@ -1,29 +1,31 @@
 def main():
-    choice = choice_selection()
+    score = 0
+    choice = choice_selection().upper()
     while choice != "Q":  # To select choices in menu
         if choice == "G":
-            score = gettihg_score()
+            score = getting_score()
+            print(f"Score = {score}")
         elif choice == "P":
-            score = gettihg_score()
+            print(score_result(score))
         elif choice == "S":
             print_star(score)
         else:
             print("Invalid choice")
-        choice = choice_selection()
+        choice = choice_selection().upper()
     print("Farewell")
 
 
 def choice_selection():
-    print("(G)et a valid score  \n(P)rint result \nS)how stars \n(Q)uit)")
+    print("(G)et a valid score\n(P)rint result\n(S)how stars\n(Q)uit)")
     choice = input(">>> ").upper()
     return choice
 
 
-def gettihg_score():
-    score = float(input("Enter score: "))
+def getting_score():
+    score = int(input("Enter score: "))
     while score < 0 or score > 100:
         print("Invalid score")  # for validating input
-        score = gettihg_score()
+        score = getting_score()
     return score
 
 
@@ -38,7 +40,7 @@ def score_result(score):
         result = "Passable"
     else:
         result = "Bad"
-    print(result)
+    return result
 
 
 main()
